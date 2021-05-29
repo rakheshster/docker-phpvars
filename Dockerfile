@@ -1,9 +1,5 @@
-FROM nginx:latest
+FROM php:7.4-apache-buster
 
 LABEL Rakhesh Sasidharan <me@rakhesh.com>
 
-COPY ./launcher.sh /
-RUN chmod +x /launcher.sh
-COPY ./default.conf /etc/nginx/conf.d/default.conf
-
-ENTRYPOINT [ "/launcher.sh" ] 
+COPY ./env.php /var/www/html/env.php

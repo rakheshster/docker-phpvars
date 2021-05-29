@@ -1,16 +1,8 @@
 version: '3'
 services:
     web:
-        image: rakheshster/nginxvars:latest
+        image: rakheshster/phpvars:latest
         environment: 
             VAR1: "boo2"
         ports: 
             - 80:80
-        volumes:
-            - ${WEBAPP_STORAGE_HOME}:/usr/share/nginx/html/more/
-    web2:
-        image: rakheshster/nginxvars:latest
-        environment: 
-            VAR2: "boo3"
-        volumes:
-            - ${WEBAPP_STORAGE_HOME}:/usr/share/nginx/html/more/
